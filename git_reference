@@ -1,0 +1,54 @@
+File is for git reference
+
+0.0 - Regulear/Daily Commands
+1.0 - PreReq
+2.0 - Create Repo
+3.0 - Clone/DL Repo
+4.0 - Push/Pull Repo
+
+
+
+0.0 - Regular/Daily Commands
+	~$ git status
+	~$ git add <file_name>
+	~$ git add .		# Adds all files
+	~$ git commit -m "Message or comment for your commit"
+	~$ git commit		# Without -m, nano will open up and you can add comments
+	~$ git diff <file_name>
+	~$ git push origin main
+
+1.0 - Preqequisites : When starting on a fresh system
+	Validate if the system already has git installed 
+	~$ which git
+
+	If there is an output, git is already installed
+
+1.1 - Install as needed
+	Debian based Linux
+	~$ sudo apt install git
+
+	RHEL based Linux
+	~$ sudo dnf install git
+
+2.0 - Create Repo
+	~$ git init <name_of_repo>
+
+3.0 Clone/DL Repo : Utilize web browser to grab URL. GITHUB > CODE > HTTPS
+	Make sure your present working directory isn't in already existing directory
+	~$ git clone <URL>
+
+4.0 Push/Pull Local <-> Remote : Repo has to exist at both locations
+	~$ git remote add origin <URL>
+
+	This command changes the local 'remote origin' config which can be can be validated in the
+	.git/config file
+
+	At this point, nothing has been pushed up to remote location. If it hasn't beend one already,
+	create a personal access token.
+	PROFILE > SETTINGS > DEV SETTINGS > PERSONAL ACCESS TOKEN
+	
+	~$ git push origin main
+	~$ git pull origin main
+
+	Will get prompted for username
+	Will get prompted for password/token
