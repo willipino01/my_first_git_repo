@@ -1,0 +1,20 @@
+# Below is instructions on how to change interface name on Linux Mint
+
+To set a persistent network device, create /etc/systemd/network/01-wlp3so.link with the following contents. 
+The filename must start with a number and end with .link but the rest is not important and up to you. 
+You need one file for each network interface you want to rename.
+
+---------------------------------------------------------------------------------
+
+[Match]
+# This is the MAC address of the card to change.  You can also
+# match against other properties like PCI/USB slot.
+MACAddress=c8:69:cd:a4:54:8c
+
+[Link]
+# This is the name to assign.  It must not conflict with any existing
+# device, so be careful if you use a name like eth0 which can fail
+# unexpectedly if you plug in another device that ends up on eth0 first.
+Name=wlan0
+
+---------------------------------------------------------------------------------
